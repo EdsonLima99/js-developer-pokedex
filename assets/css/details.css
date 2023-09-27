@@ -1,0 +1,114 @@
+.header,
+.body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos para o botão de voltar */
+.back-button {
+    margin-right: 20px;
+    /* Espaçamento à direita para separar do título */
+    text-decoration: none;
+}
+
+#backButton {
+    background-color: #6c79db;
+    /* Cor de fundo do botão */
+    color: #fff;
+    /* Cor do texto do botão */
+    border: none;
+    /* Remova a borda do botão */
+    padding: 10px 20px;
+    /* Espaçamento interno */
+    border-radius: 5px;
+    /* Borda arredondada */
+    cursor: pointer;
+    /* Cursor do mouse em forma de mão */
+    display: flex;
+    /* Exibe os elementos como flexbox para alinhar a seta e o texto */
+    align-items: center;
+    /* Alinhar verticalmente o conteúdo do botão */
+}
+
+.pokemon .number {
+    color: #fff;
+    font-size: 1rem;
+    opacity: 1;
+}
+
+.pokemon .detail .types .type {
+    display: inline-block;
+}
+
+/* Estilos para a seção de detalhes do Pokémon */
+.body {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+}
+
+.detail-heading {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.pokemon-details {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.main-item {
+    display: flex;
+    margin-bottom: 10px;
+    font-size: 16px;
+    align-items: center;
+}
+
+.label {
+    flex-basis: 30%; /* Largura da label */
+}
+
+.sublist {
+    padding-left: 0;
+    list-style: none;
+}
+
+.sublist li {
+    display: inline-block;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.pokemon-details span {
+    color: rgb(161, 159, 159);
+}
+
+@media screen and (max-width: 380px) {
+    .content {
+        max-width: auto;
+        height: auto;
+        margin: 1rem auto;
+        border-radius: 1rem;
+    }
+}
+
+@media screen and (min-width: 380px) {
+    .content {
+        max-width: 380px;
+        height: auto;
+        margin: 1rem auto;
+        border-radius: 1rem;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .content {
+        max-width: 576px;
+        height: auto;
+        margin: 1rem auto;
+        border-radius: 1rem;
+    }
+}

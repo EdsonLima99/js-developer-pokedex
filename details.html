@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokemon Details</title>
+
+    <!-- Normalize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Font Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet" />
+
+    <!-- Nosso CSS -->
+    <link rel="stylesheet" href="/assets/css/global.css" />
+    <link rel="stylesheet" href="/assets/css/pokedex.css" />
+    <link rel="stylesheet" href="/assets/css/details.css" />
+</head>
+
+<body>
+    <section class="content grass">
+        <div class="header">
+            <div class="back-button">
+                <button id="backButton">
+                    Voltar
+                </button>
+                <div class="pokemon">
+                    <h1 class="name">Bulbasaur</h1>
+                    <span class="number">#001</span>
+
+                    <div class="detail">
+                        <ol class="types">
+                            <li class="type grass">Grass</li>
+                            <li class="type poison">Poison</li>
+                        </ol>
+                    </div>
+
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg"
+                        alt="Bulbasaur" />
+                </div>
+            </div>
+            <div class="body">
+                <h2 class="detail-heading">About</h2>
+                <ul class="pokemon-details" id="pokemonDetails">
+                    <li class="main-item">
+                        <span class="label">Species</span>
+                        <ul class="sublist">
+                            <li>Grass</li>
+                        </ul>
+                    </li>
+                    <li class="main-item">
+                        <span class="label">Height</span>
+                        <ul class="sublist">
+                            <li>7 decimetres</li>
+                        </ul>
+                    </li>
+                    <li class="main-item">
+                        <span class="label">Weight</span>
+                        <ul class="sublist">
+                            <li>69 hectograms</li>
+                        </ul>
+                    </li>
+                    <li class="main-item">
+                        <span class="label">Ability</span>
+                        <ul class="sublist">
+                            <li>Overgrow</li>
+                        </ul>
+                    </li>
+                </ul>
+                <h2 class="detail-heading">Breeding</h2>
+                <ul class="pokemon-details" id="pokemonDetails">
+                    <li class="main-item">
+                        <span class="label">Gender</span>
+                        <ul class="sublist">
+                            <li>7 male</li>
+                            <li>12 female</li>
+                        </ul>
+                    </li>
+                    <li class="main-item">
+                        <span class="label">Egg Groups</span>
+                        <ul class="sublist">
+                            <li>Monster</li>
+                            <li>Grass</li>
+                        </ul>
+                    </li>
+                    <li class="main-item">
+                        <span class="label">Egg Cycle</span>
+                        <ul class="sublist">
+                            <li>Grass</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+    </section>
+
+    <!-- Nosso JS -->
+    <!-- <script src="/assets/js/pokemon-model.js"></script>
+    <script src="/assets/js/poke-api.js"></script>
+    <script src="/assets/js/main.js"></script> -->
+    <script src="/assets/js/details.js"></script>
+</body>
+
+</html>
