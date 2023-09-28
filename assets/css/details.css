@@ -4,10 +4,16 @@
     padding: 0;
 }
 
+.pokemon-detail {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
 /* Estilos para o botão de voltar */
-.back-button {
-    margin-right: 20px;
-    /* Espaçamento à direita para separar do título */
+.back-button, a {
     text-decoration: none;
 }
 
@@ -38,6 +44,8 @@
 
 .pokemon .detail .types .type {
     display: inline-block;
+    font-size: 0.675rem;
+    margin-right: 5px;
 }
 
 /* Estilos para a seção de detalhes do Pokémon */
@@ -80,6 +88,8 @@
     display: inline-block;
     margin-bottom: 5px;
     font-size: 14px;
+    margin-right: 5px;
+    text-transform: capitalize;
 }
 
 .pokemon-details span {

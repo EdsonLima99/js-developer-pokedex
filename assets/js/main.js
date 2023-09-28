@@ -5,9 +5,14 @@ const maxRecords = 151;
 const limit = 10;
 let offset = 0;
 
+// No início do arquivo, você pode definir uma função para redirecionar para a página de detalhes com o ID do Pokémon como parâmetro:
+function redirectToDetailsPage(pokemonId) {
+    window.location.href = `details.html?id=${pokemonId}`;
+}
+
 function convertPokemonToLi(pokemon) {
     return `
-        <li class="pokemon ${pokemon.type}">
+        <li class="pokemon ${pokemon.type}" data-id="${pokemon.number}">
             <span class="number">#${pokemon.number}</span>
             <span class="name">${pokemon.name}</span>
 
@@ -47,3 +52,13 @@ loadMoreButton.addEventListener("click", () => {
         loadPokemonItens(offset, limit);
     }
 });
+
+pokemonList.addEventListener("click", (event) => {
+    const clickedPokemon = event.target.closest("li.pokemon");
+    
+    if (clickedPokemon) {
+        const pokemonId = clickedPokemon.getAttribute("data-id");
+        redirectToDetailsPage(pokemonId);
+    }
+});
+

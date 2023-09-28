@@ -13,6 +13,11 @@ function convertPokeApiDetailToPokemon(pokeDetail) {
 
     pokemon.photo = pokeDetail.sprites.other.dream_world.front_default;
 
+    pokemon.species = pokeDetail.species.name;
+    pokemon.height = pokeDetail.height;
+    pokemon.weight = pokeDetail.weight;
+    pokemon.abilities = pokeDetail.abilities.map((abilitieSlot) => abilitieSlot.ability.name);
+
     return pokemon;
 }
 
@@ -21,6 +26,14 @@ pokeApi.getPokemonDetail = (pokemon) => {
         .then((response) => response.json())
         .then(convertPokeApiDetailToPokemon);
 };
+
+pokeApi.getPokemon = (pokemonId) => {
+    const url = `https://pokeapi.co/api/v2/pokemon/${pokemonId}`;
+    
+    return fetch(url)
+        .then((response) => response.json())
+        .then(convertPokeApiDetailToPokemon);
+}
 
 pokeApi.getPokemons = (offset = 0, limit = 5) => {
     const url = `https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`;
